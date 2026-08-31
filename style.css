@@ -32,7 +32,7 @@ footer{padding:25px 7%;border-top:1px solid var(--border);text-align:center;colo
 /* Attractive Contact Cards */
 .quick-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: 30px;
   width: 100%;
@@ -43,9 +43,9 @@ footer{padding:25px 7%;border-top:1px solid var(--border);text-align:center;colo
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  min-height: 130px;
-  padding: 20px 15px;
+  gap: 8px;
+  min-height: 120px;
+  padding: 15px 10px;
   border-radius: 18px;
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -98,4 +98,13 @@ footer{padding:25px 7%;border-top:1px solid var(--border);text-align:center;colo
   .quick-links {
     grid-template-columns: 1fr;
   }
+}
+.quick-card span {
+    font-size: 14px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.quick-card strong {
+    font-size: 18px;
 }
