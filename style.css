@@ -29,3 +29,73 @@ footer{padding:25px 7%;border-top:1px solid var(--border);text-align:center;colo
 .reveal{opacity:0;transform:translateY(20px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
 @media(max-width:850px){.nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:rgba(7,17,31,.97);padding:20px 7%;flex-direction:column;gap:16px;border-bottom:1px solid var(--border)}.nav-links.open{display:flex}.menu-btn{display:block}.hero{grid-template-columns:1fr;text-align:center;padding-top:65px}.hero-desc{margin:auto}.buttons,.quick-links{justify-content:center}.hero-card{order:-1}.profile-ring{width:250px}.about-grid,.project-grid,.skill-grid,.achievement-grid,.cert-list{grid-template-columns:1fr}.project-card.featured{grid-column:span 1}.section{padding:75px 6%}.section-head{text-align:center}.stats{margin-top:0}}
 @media(max-width:480px){.hero h1{letter-spacing:-2px}.contact-box{padding:50px 18px}.contact-details{flex-direction:column;gap:8px}.buttons{flex-direction:column}.btn{width:100%}}
+/* Attractive Contact Cards */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.quick-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 130px;
+  padding: 20px 15px;
+  border-radius: 18px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.quick-card i {
+  font-size: 32px;
+}
+
+.quick-card span {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.quick-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.quick-card.email i,
+.quick-card.email span {
+  color: #4dabff;
+}
+
+.quick-card.phone i,
+.quick-card.phone span {
+  color: #45e68a;
+}
+
+.quick-card.linkedin i,
+.quick-card.linkedin span {
+  color: #2196f3;
+}
+
+.quick-card.github i,
+.quick-card.github span {
+  color: #c084fc;
+}
+
+@media (max-width: 900px) {
+  .quick-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .quick-links {
+    grid-template-columns: 1fr;
+  }
+}
